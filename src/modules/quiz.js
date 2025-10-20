@@ -32,6 +32,11 @@ export function getCurrentQuestion() {
   };
 }
 
+// Hämta rätt svar för nuvarande fråga
+export function getCorrectAnswer() {
+  return state.questions[state.currentIndex].correctAnswer;
+}
+
 // Validera svar
 export function validateAnswer(userAnswerIndex) {
   const currentQuestion = state.questions[state.currentIndex];

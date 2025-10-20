@@ -39,7 +39,7 @@ optionsContainer.addEventListener("click", (e) => {
   }
 
   // Visa feedback
-  UI.showFeedback(button, isCorrect);
+  UI.showFeedback(button, isCorrect, Quiz.getCorrectAnswer());
 
   // Förhindra fler klick
   answered = true;
@@ -47,7 +47,6 @@ optionsContainer.addEventListener("click", (e) => {
 
 // Nästa-knapp - gå till nästa fråga
 nextBtn.addEventListener("click", () => {
-  if(answered === false) return;
   const nextQuestionData = Quiz.nextQuestion();
 
   if (nextQuestionData) {

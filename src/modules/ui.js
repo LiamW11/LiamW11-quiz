@@ -18,6 +18,7 @@ const nextBtn = document.getElementById("next-btn");
 const finalScore = document.getElementById("final-score");
 const percentage = document.getElementById("percentage");
 const feedbackMessage = document.getElementById("feedback-message");
+const progressBar = document.getElementById("progress-bar");
 
 // Hjälpfunktion för att visa/dölja vyer
 export function showView(viewName) {
@@ -42,6 +43,10 @@ export function renderQuestion(questionData) {
   questionNumber.textContent = `Fråga ${currentIndex + 1} av ${totalQuestions}`;
   categoryEl.textContent = question.category;
 
+  // Uppdatera progress bar
+  const progress = ((currentIndex + 1) / totalQuestions) * 100;
+  progressBar.style.width = `${progress}%`;
+
   optionsContainer.innerHTML = "";
 
   question.options.forEach((option, index) => {
@@ -56,13 +61,18 @@ export function renderQuestion(questionData) {
 }
 
 // Visa feedback på svarsknappen (grön eller röd)
-export function showFeedback(button, isCorrect) {
+export function showFeedback(button, isCorrect, correctAnswerIndex) {
   if (isCorrect) {
     button.className = "w-full bg-green-100 border-2 border-green-500 text-green-800 font-medium py-3 px-6 rounded-lg text-left";
     feedbackEl.textContent = "✅ Rätt!";
     feedbackEl.className = "p-4 rounded-lg border-2 mb-4 text-center font-semibold bg-green-100 border-green-500 text-green-800";
   } else {
     button.className = "w-full bg-red-100 border-2 border-red-500 text-red-800 font-medium py-3 px-6 rounded-lg text-left";
+    
+    // Markera rätt svar när användaren svarar fel
+    const buttons = optionsContainer.querySelectorAll("button");
+    buttons[correctAnswerIndex].className = "w-full bg-green-100 border-2 border-green-500 text-green-800 font-medium py-3 px-6 rounded-lg text-left";
+    
     feedbackEl.textContent = "❌ Fel!";
     feedbackEl.className = "p-4 rounded-lg border-2 mb-4 text-center font-semibold bg-red-100 border-red-500 text-red-800";
   }
