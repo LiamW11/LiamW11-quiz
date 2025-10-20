@@ -2,7 +2,8 @@
 // QUIZ-LOGIK (Affärslogik)
 // =================================
 
-import { getAllQuestions } from "./questions.js";
+import { getAllQuestions } from "./questions.js"
+import * as UI from "./ui.js";
 
 // State - håller koll på nuvarande quiz-tillstånd
 let state = {
@@ -10,11 +11,14 @@ let state = {
   currentIndex: 0,
   score: 0,
   totalQuestions: 0,
+  timeLeft: 0,
+  timerInterval: null,
 };
 
 // Initiera quiz - hämta frågor och återställ state
 export function init() {
   state.questions = getAllQuestions();
+  shuffleQuestions();
   state.currentIndex = 0;
   state.score = 0;
   state.totalQuestions = state.questions.length;
@@ -63,7 +67,7 @@ export function nextQuestion() {
 // Hämta slutresultat
 export function getFinalScore() {
   const percentage = Math.round((state.score / state.totalQuestions) * 100);
-
+  saveHighScore(state.score);
   return {
     score: state.score,
     total: state.totalQuestions,
@@ -93,4 +97,43 @@ export function shuffleQuestions() {
       state.questions[i],
     ];
   }
+}
+
+export function saveHighScore(score) {
+  const highScore = Number(localStorage.getItem("quizHighscore")) || 0;
+  if (score > highScore) {
+    localStorage.setItem("quizHighscore", score);
+    console.log("Ny quizHighscore:", score);
+  }
+}
+
+export function startTimer() {
+  const timeLeftEl = document.getElementById("time-left");
+  timeLeftEl.classList.remove("text-red-500");
+  if (state.timerInterval) return;
+  state.timeLeft = 150;
+  state.timerInterval = setInterval(() => {
+    if (state.timeLeft <= 0) {
+      stopTimer();
+      alert("Tid slut. Försök igen!");
+      const firstQuestion = init();
+      UI.updateScore(0);
+      UI.displayHighscore();
+      UI.renderQuestion(firstQuestion);
+      startTimer();
+      UI.showView("quiz");
+      answered = false;
+      return;
+    }
+    if(state.timeLeft <= 50){
+      timeLeftEl.classList.add("text-red-500");
+    }
+    timeLeftEl.textContent = state.timeLeft;
+    state.timeLeft--;
+  }, 1000);
+}
+
+export function stopTimer() {
+  clearInterval(state.timerInterval);
+  state.timerInterval = null;
 }

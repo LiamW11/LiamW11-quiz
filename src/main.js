@@ -14,7 +14,9 @@ const optionsContainer = document.getElementById("options-container");
 // Startknapp - starta quiz
 startBtn.addEventListener("click", () => {
   const firstQuestion = Quiz.init();
+  UI.displayHighscore();
   UI.renderQuestion(firstQuestion);
+  Quiz.startTimer();
   UI.showView("quiz");
 });
 
@@ -55,6 +57,7 @@ nextBtn.addEventListener("click", () => {
     answered = false;
   } else {
     // Inga fler frågor - visa resultat
+    Quiz.stopTimer();
     const finalScore = Quiz.getFinalScore();
     const message = Quiz.getFeedbackMessage(finalScore.percentage);
     UI.showResult(finalScore, message);
@@ -65,7 +68,9 @@ nextBtn.addEventListener("click", () => {
 restartBtn.addEventListener("click", () => {
   const firstQuestion = Quiz.init();
   UI.updateScore(0);
+  displayHighscore()
   UI.renderQuestion(firstQuestion);
+  Quiz.startTimer();
   UI.showView("quiz");
   answered = false;
 });

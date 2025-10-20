@@ -128,14 +128,3 @@ export const questions = [
 export function getAllQuestions() {
   return questions;
 }
-
-// VALFRITT FÖR MELLANNIVÅ: Funktion för att hämta frågor efter kategori
-export function getQuestionsByCategory(category) {
-  return questions.filter((q) => q.category === category);
-}
-
-// VALFRITT FÖR MELLANNIVÅ: Funktion för att hämta alla kategorier
-export function getCategories() {
-  const categories = questions.map((q) => q.category);
-  return [...new Set(categories)]; // Ta bort dubletter
-}

@@ -9,11 +9,11 @@ const resultView = document.getElementById("result-view");
 
 const questionNumber = document.getElementById("question-number");
 const scoreDisplay = document.getElementById("score-display");
+const highscoreDisplay = document.getElementById("highscore-display");
 const categoryEl = document.getElementById("category");
 const questionText = document.getElementById("question-text");
 const optionsContainer = document.getElementById("options-container");
 const feedbackEl = document.getElementById("feedback");
-const nextBtn = document.getElementById("next-btn");
 
 const finalScore = document.getElementById("final-score");
 const percentage = document.getElementById("percentage");
@@ -91,4 +91,8 @@ export function showResult(finalScoreData, message) {
 // Uppdatera poängvisningen under quiz
 export function updateScore(score) {
   scoreDisplay.textContent = `Poäng: ${score}`;
+}
+
+export function displayHighscore() {
+  highscoreDisplay.textContent = `Högsta poäng: ${Number(localStorage.getItem("quizHighscore")) || 0}`
 }
