@@ -24,10 +24,104 @@ export const questions = [
     options: ["<header>", "<h1>", "<title>", "<heading>"],
     correctAnswer: 1,
   },
-  // TODO: Lägg till minst 12 frågor till (totalt 15)
-  // TIPS: Följ samma struktur som ovan
-  // TIPS: Använd olika kategorier (JavaScript, HTML, CSS, Webb)
-  // TIPS: correctAnswer är index i options-arrayen (börjar på 0)
+  {
+    id: 4,
+    category: "JavaScript",
+    question: "Vad returnerar uttrycket typeof NaN?",
+    options: ["number", "NaN", "undefined", "object"],
+    correctAnswer: 0,
+  },
+  {
+    id: 5,
+    category: "JavaScript",
+    question:
+      "Vilken metod används för att lägga till ett element i slutet av en array?",
+    options: ["push()", "pop()", "shift()", "unshift()"],
+    correctAnswer: 0,
+  },
+  {
+    id: 6,
+    category: "JavaScript",
+    question: "Vad gör funktionen JSON.stringify()?",
+    options: [
+      "Konverterar en JSON-sträng till ett objekt",
+      "Konverterar ett objekt till en JSON-sträng",
+      "Rensar ett JSON-objekt",
+      "Validerar en JSON-struktur",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 7,
+    category: "JavaScript",
+    question: "Vilket värde returnerar uttrycket 2 + '2'?",
+    options: ["4", "22", "NaN", "error"],
+    correctAnswer: 1,
+  },
+  {
+    id: 8,
+    category: "JavaScript",
+    question: "Vilket av följande jämför både värde och datatyp?",
+    options: ["==", "=", "===", "!="],
+    correctAnswer: 2,
+  },
+  {
+    id: 9,
+    category: "JavaScript",
+    question: "Vilken metod används för att välja ett element med id i DOM?",
+    options: [
+      "getElementsByClassName()",
+      "getElementById()",
+      "querySelectorAll()",
+      "getElementByTagName()",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 10,
+    category: "HTML",
+    question: "Vilken HTML-tagg används för att skapa en länk?",
+    options: ["<a>", "<link>", "<href>", "<url>"],
+    correctAnswer: 0,
+  },
+  {
+    id: 11,
+    category: "HTML",
+    question: "Vilken HTML-tagg används för att visa en bild?",
+    options: ["<img>", "<image>", "<src>", "<pic>"],
+    correctAnswer: 0,
+  },
+  {
+    id: 12,
+    category: "HTML",
+    question:
+      "Vilket attribut används för att ange en länkadress i en <a>-tagg?",
+    options: ["src", "href", "link", "target"],
+    correctAnswer: 1,
+  },
+  {
+    id: 13,
+    category: "HTML",
+    question: "Vilken HTML-tagg används för att skapa en numrerad lista?",
+    options: ["<ul>", "<li>", "<ol>", "<list>"],
+    correctAnswer: 2,
+  },
+  {
+    id: 14,
+    category: "HTML",
+    question:
+      "Vilken HTML5-tagg används för att definiera en sektion med oberoende innehåll, t.ex. ett blogginlägg?",
+    options: ["<section>", "<div>", "<article>", "<aside>"],
+    correctAnswer: 2,
+  },
+  {
+    id: 15,
+    category: "JavaScript",
+    question:
+      "Vilken funktion används för att skriva ut något till webbkonsolen?",
+    options: ["print()", "console.write()", "console.log()", "alert()"],
+    correctAnswer: 2,
+  },
 ];
 
 // Funktion för att hämta alla frågor
@@ -38,10 +132,4 @@ export function getAllQuestions() {
 // VALFRITT FÖR MELLANNIVÅ: Funktion för att hämta frågor efter kategori
 export function getQuestionsByCategory(category) {
   return questions.filter((q) => q.category === category);
-}
-
-// VALFRITT FÖR MELLANNIVÅ: Funktion för att hämta alla kategorier
-export function getCategories() {
-  const categories = questions.map((q) => q.category);
-  return [...new Set(categories)]; // Ta bort dubletter
 }

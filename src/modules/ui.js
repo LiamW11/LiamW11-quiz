@@ -1,8 +1,6 @@
 // =================================
 // UI-HANTERING (Presentation)
 // =================================
-// TODO: Fyll i funktionerna nedan
-// =================================
 
 // Hämta alla DOM-element
 const startView = document.getElementById("start-view");
@@ -36,18 +34,8 @@ export function showView(viewName) {
   }
 }
 
-// TODO 1: IMPLEMENTERA renderQuestion()
 // Visa en fråga och dess svarsalternativ
-// Parameter: questionData (objekt från quiz.js med question, currentIndex, totalQuestions)
 export function renderQuestion(questionData) {
-  // TIPS: Uppdatera questionText.textContent
-  // TIPS: Uppdatera questionNumber och category
-  // TIPS: Rensa optionsContainer.innerHTML = ''
-  // TIPS: Loopa genom questionData.question.options och skapa knappar
-  // TIPS: Sätt button.dataset.index för varje knapp
-  // TIPS: Dölj feedback
-
-  // KOD HÄR
   const { question, currentIndex, totalQuestions } = questionData;
 
   questionText.textContent = question.question;
@@ -60,40 +48,29 @@ export function renderQuestion(questionData) {
     const button = document.createElement("button");
     button.textContent = option;
     button.dataset.index = index;
+    button.className = "w-full bg-gray-50 hover:bg-gray-100 border-2 border-gray-300 text-gray-800 font-medium py-3 px-6 rounded-lg text-left transition";
     optionsContainer.appendChild(button);
   });
 
   feedbackEl.classList.add("hidden");
 }
 
-// TODO 2: IMPLEMENTERA showFeedback()
 // Visa feedback på svarsknappen (grön eller röd)
-// Parametrar: button (knappen som klickades), isCorrect (true/false)
 export function showFeedback(button, isCorrect) {
-  // TIPS: Ändra button-klasserna beroende på om svaret är rätt eller fel
-  // TIPS: Visa feedbackEl och lägg till text
-  // TIPS: Använd Tailwind-klasser för färger (t.ex. bg-green-100, border-green-500)
-
-  // KOD HÄR
   if (isCorrect) {
+    button.className = "w-full bg-green-100 border-2 border-green-500 text-green-800 font-medium py-3 px-6 rounded-lg text-left";
     feedbackEl.textContent = "✅ Rätt!";
-    feedbackEl.classList.remove("hidden");
+    feedbackEl.className = "p-4 rounded-lg border-2 mb-4 text-center font-semibold bg-green-100 border-green-500 text-green-800";
   } else {
+    button.className = "w-full bg-red-100 border-2 border-red-500 text-red-800 font-medium py-3 px-6 rounded-lg text-left";
     feedbackEl.textContent = "❌ Fel!";
-    feedbackEl.classList.remove("hidden");
+    feedbackEl.className = "p-4 rounded-lg border-2 mb-4 text-center font-semibold bg-red-100 border-red-500 text-red-800";
   }
+  feedbackEl.classList.remove("hidden");
 }
 
-// TODO 3: IMPLEMENTERA showResult()
 // Visa resultatskärmen med poäng och procent
-// Parameter: finalScoreData (objekt med score, total, percentage), message (feedbacktext)
 export function showResult(finalScoreData, message) {
-  // TIPS: Uppdatera finalScore.textContent med "X/Y"
-  // TIPS: Uppdatera percentage.textContent med "Z%"
-  // TIPS: Uppdatera feedbackMessage.textContent
-  // TIPS: Anropa showView('result')
-
-  // KOD HÄR
   finalScore.textContent = `${finalScoreData.score}/${finalScoreData.total}`;
   percentage.textContent = `${finalScoreData.percentage}%`;
   feedbackMessage.textContent = message;
@@ -101,12 +78,7 @@ export function showResult(finalScoreData, message) {
   showView("result");
 }
 
-// TODO 4: IMPLEMENTERA updateScore()
 // Uppdatera poängvisningen under quiz
-// Parameter: score (nuvarande poäng)
 export function updateScore(score) {
-  // TIPS: Uppdatera scoreDisplay.textContent
-
-  // KOD HÄR
   scoreDisplay.textContent = `Poäng: ${score}`;
 }

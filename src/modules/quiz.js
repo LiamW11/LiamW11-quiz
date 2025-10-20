@@ -1,8 +1,6 @@
 // =================================
 // QUIZ-LOGIK (Affärslogik)
 // =================================
-// DU SKA FYLLA I FUNKTIONERNA NEDAN
-// =================================
 
 import { getAllQuestions } from "./questions.js";
 
@@ -34,42 +32,20 @@ export function getCurrentQuestion() {
   };
 }
 
-// TODO 1: IMPLEMENTERA validateAnswer()
-// Jämför användarens svar med rätt svar
-// Parameter: userAnswerIndex (vilket alternativ användaren valde, 0-3)
-// Returnera: true om rätt, false om fel
+// Validera svar
 export function validateAnswer(userAnswerIndex) {
-  // TIPS: Hämta nuvarande fråga från state.questions[state.currentIndex]
-  // TIPS: Jämför userAnswerIndex med question.correctAnswer
-  // TIPS: Returnera true eller false
-
-  // DIN KOD HÄR
   const currentQuestion = state.questions[state.currentIndex];
   return userAnswerIndex === currentQuestion.correctAnswer;
 }
 
-// TODO 2: IMPLEMENTERA updateScore()
-// Öka poängen om svaret är rätt
-// Returnera: den nya poängen
+// Uppdatera poäng
 export function updateScore() {
-  // TIPS: state.score++ eller state.score += 1
-  // TIPS: returnera state.score
-
-  // DIN KOD HÄR
   state.score++;
   return state.score;
 }
 
-// TODO 3: IMPLEMENTERA nextQuestion()
 // Gå till nästa fråga
-// Returnera: nästa frågeobjekt, eller null om inga fler frågor finns
 export function nextQuestion() {
-  // TIPS: Öka state.currentIndex
-  // TIPS: Kolla om vi är färdiga (currentIndex >= totalQuestions)
-  // TIPS: Om fler frågor finns, returnera getCurrentQuestion()
-  // TIPS: Om inga fler frågor, returnera null
-
-  // DIN KOD HÄR
   state.currentIndex++;
 
   if (state.currentIndex < state.totalQuestions) {
@@ -79,15 +55,8 @@ export function nextQuestion() {
   return null; // Inga fler frågor
 }
 
-// TODO 4: IMPLEMENTERA getFinalScore()
-// Beräkna och returnera slutresultat
-// Returnera: objekt med { score, total, percentage }
+// Hämta slutresultat
 export function getFinalScore() {
-  // TIPS: score = state.score
-  // TIPS: total = state.totalQuestions
-  // TIPS: percentage = Math.round((score / total) * 100)
-
-  // DIN KOD HÄR
   const percentage = Math.round((state.score / state.totalQuestions) * 100);
 
   return {
@@ -97,7 +66,7 @@ export function getFinalScore() {
   };
 }
 
-// VALFRITT FÖR MELLANNIVÅ: Feedbackmeddelande baserat på resultat
+// Feedbackmeddelande baserat på resultat
 export function getFeedbackMessage(percentage) {
   if (percentage >= 90) {
     return "Utmärkt prestation! 🌟";

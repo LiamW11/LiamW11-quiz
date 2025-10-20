@@ -6,7 +6,6 @@
     <title>Quiz App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Enkel visa/dölj-logik */
       .view {
         display: none;
       }
@@ -15,42 +14,54 @@
       }
     </style>
   </head>
-  <body>
+  <body class="min-h-screen bg-gray-400 flex items-center justify-center p-4">
     <!-- STARTSIDA -->
-    <div id="start-view" class="view active">
-      <h1>Quiz App</h1>
-      <p>Testa dina kunskaper!</p>
-      <button id="start-btn">Starta Quiz</button>
+    <div id="start-view" class="view active bg-white rounded-lg shadow-lg p-8 max-w-2xl w-full text-center">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">Quiz App</h1>
+      <p class="text-gray-600 mb-8">Testa dina kunskaper!</p>
+      <button id="start-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition">
+        Starta Quiz
+      </button>
     </div>
 
     <!-- QUIZSIDA -->
-    <div id="quiz-view" class="view">
-      <div id="question-number">Fråga 1 av 15</div>
-      <div id="score-display">Poäng: 0</div>
-      <div id="category">Kategori</div>
-      <h2 id="question-text">Frågan visas här</h2>
+    <div id="quiz-view" class="view bg-white rounded-lg shadow-lg p-8 max-w-2xl w-full">
+      <div class="flex justify-between mb-4 text-lg text-gray-600">
+        <div id="question-number">Fråga 1 av 15</div>
+        <div id="score-display">Poäng: 0</div>
+      </div>
+      <div id="category" class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+        <!-- Kategori visas här -->
+      </div>
+      <h2 id="question-text" class="text-2xl font-bold text-gray-800 mb-6">
+        <!-- Frågan visas här -->
+      </h2>
 
-      <div id="options-container">
+      <div id="options-container" class="space-y-3 mb-6">
         <!-- Svarsalternativ genereras av JavaScript -->
       </div>
 
-      <div id="feedback" class="hidden">
+      <div id="feedback" class="hidden p-4 rounded-lg border-2 mb-4 text-center font-semibold">
         <!-- Feedback visas här -->
       </div>
 
-      <button id="next-btn">Nästa fråga</button>
+      <button id="next-btn" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition">
+        Nästa fråga
+      </button>
     </div>
 
     <!-- RESULTATSIDA -->
-    <div id="result-view" class="view">
-      <h2>Quiz slutförd!</h2>
-      <div id="score-container">
-        <p>Din poäng:</p>
-        <p id="final-score">0/15</p>
-        <p id="percentage">0%</p>
+    <div id="result-view" class="view bg-white rounded-lg shadow-lg p-8 max-w-2xl w-full text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Quiz slutförd!</h2>
+      <div id="score-container" class="mb-6">
+        <p class="text-gray-600 mb-2">Din poäng:</p>
+        <p id="final-score" class="text-5xl font-bold text-blue-600 mb-2">0/15</p>
+        <p id="percentage" class="text-2xl text-gray-700">0%</p>
       </div>
-      <p id="feedback-message">Feedback kommer här</p>
-      <button id="restart-btn">Starta om</button>
+      <p id="feedback-message" class="text-xl text-gray-700 mb-8">Feedback kommer här</p>
+      <button id="restart-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition">
+        Starta om
+      </button>
     </div>
 
     <script type="module" src="src/main.js"></script>
