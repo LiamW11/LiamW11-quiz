@@ -300,11 +300,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Ursprunglig feedback kvarstår
 - Poäng ändras inte
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Det går ej att ändra sitt svar efter att man svarat.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -322,11 +322,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Poäng ökar från 0 till 1
 - Poängvisning uppdateras
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** När rätt svar väljs så ökar poängen med ett.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -344,11 +344,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Poäng förblir 0
 - Ingen poängökning
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** När fel svar väljs så ökar inte poängen.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -367,11 +367,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Nästa-knappen är inaktiverad (disabled/grå) innan svar
 - Nästa-knappen aktiveras (enabled/färgad) efter svar
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Knappen är grå och gör ingenting vid klick innan man svarar. Knappen blir grön och för en vidare till nästa fråga efter man har svarat.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -391,11 +391,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Smooth transition (fade/slide)
 - Progress uppdateras
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** När man trycker på nästa fråga knappen så dycker nästa fråga upp direkt. Progressbaren glider snabbt uppåt.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Själva frågan har ingen transition, endast progress bar.
 
 ---
 
@@ -415,11 +415,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Fråga 3: "Fråga 3 av X"
 (X = totalt antal frågor)
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Efter varje fråga uppdateras progress-text med korrekt antal frågor.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -439,11 +439,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Vid 50% är halva baren fylld
 - Vid 100% är hela baren fylld
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Progress bar fylls propertionellt.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -461,11 +461,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Procent visas (t.ex. "70%")
 - Poängen stämmer med antal rätta svar
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Antal rätt och procent visas korrekt.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -486,11 +486,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - 50-69%: "Godkänt resultat!"
 - 0-49%: "Fortsätt öva!"
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Resultatmeddelanden visas vid korrekt antal rätt.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -510,11 +510,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Progress återställs till "Fråga 1 av X"
 - Alla tidigare svar rensas
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Quiz kan påbörjar på nytt från resultatskärm.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -536,9 +536,9 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Knappar är minst 44x44px (klickbara med finger)
 - Layout är vertikalt orienterad
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Responsiv design fungerar för Iphone SE.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
 ---
 
@@ -555,9 +555,9 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Utnyttjar bredden bättre än mobil
 - Allt innehåll syns utan scroll
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Applikationen anpassar sig inte korrekt till Ipadens layout. Den blir liten.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [ ] PASS  [X] FAIL  [ ] SKIP
 
 ---
 
@@ -574,9 +574,9 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Inte för brett (max 1200px innehållsbredd rekommenderat)
 - Bra läsbarhet
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Responsiv design fungerar för desktop.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
 ---
 
@@ -593,11 +593,11 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Minst 15 frågor finns
 - Alla frågor har: id, category, question, options (array), correctAnswer (index)
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Det finns 15 frågor som alla har de specifierade egenskaper.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -618,9 +618,9 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Inga JavaScript-fel i konsolen
 - Styling ser korrekt ut
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Allting fungerar som det ska i Chrome.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
 ---
 
@@ -633,7 +633,7 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 
 **Faktiskt resultat:** [Fyll i]
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [ ] PASS  [ ] FAIL  [X] SKIP
 
 ---
 
@@ -646,7 +646,7 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 
 **Faktiskt resultat:** [Fyll i]
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [ ] PASS  [ ] FAIL  [X] SKIP
 
 ---
 
@@ -668,9 +668,9 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Kan tabba till nästa-knapp
 - Tydlig fokusindikator (outline) på alla interaktiva element
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Det går att använda sig av tab och enter för att navigera genom hela quizet.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
 ---
 
@@ -689,9 +689,9 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Textkontrast är minst 4.5:1 (för normal text)
 - Färgfeedback (grön/röd) är tydlig även utan färg (ikoner eller text)
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Lighthouse gav 100 i accessibility audit.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
 ---
 
@@ -709,9 +709,9 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Korrekt rubrikhierarki (`<h1>`, `<h2>`)
 - Inga div-sup-itis
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** section eller main används inte. Majoriteten av alla taggar är div.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [ ] PASS  [X] FAIL  [ ] SKIP
 
 ---
 
@@ -730,9 +730,9 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Total laddningstid < 2 sekunder
 - Inga onödigt stora resurser
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Laddningstid är < 2 sekunder.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
 ---
 
@@ -748,9 +748,9 @@ Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläge
 - Feedback visas inom 200ms
 - Ingen märkbar fördröjning
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Feedback visas inom 200ms.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
 ---
 
@@ -772,9 +772,9 @@ validateAnswer(1, 1); // Där 1 är korrekt index
 validateAnswer(1, 0); // Där 0 är fel index
 ```
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Min funktion bygger på annan syntax och kan därför inte användas för detta test.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [ ] PASS  [ ] FAIL  [X] SKIP
 
 ---
 
@@ -789,28 +789,28 @@ calculateScore(7, 10);
 calculatePercentage(7, 10);
 ```
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Min funktion bygger på annan syntax och kan därför inte användas för detta test.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [ ] PASS  [ ] FAIL  [X] SKIP
 
 ---
 
 ## Sammanfattning
 
-**Totalt antal tester:** 29  
-**Genomförda tester:** [Fyll i]  
-**PASS:** [Fyll i]  
-**FAIL:** [Fyll i]  
-**SKIP:** [Fyll i]
+**Totalt antal tester:** 40  
+**Genomförda tester:** [36]  
+**PASS:** [30]  
+**FAIL:** [2]  
+**SKIP:** [4]
 
 ### Kritiska buggar
-[Lista kritiska buggar som måste åtgärdas]
+Inga kritiska buggar plågar applikationen
 
 ### Mindre buggar
-[Lista mindre buggar som bör åtgärdas]
+Inga mindre buggar präglar applikationen.
 
 ### Förbättringsförslag
-[Lista förbättringar för framtida versioner]
+Responsiv design för Ipad och bättre HTML-struktur
 
 ---
 
@@ -818,7 +818,9 @@ calculatePercentage(7, 10);
 
 [Skriv en kort sammanfattning: Är applikationen redo för leverans? Vilka krav är uppfyllda? Vad behöver förbättras?]
 
-**Godkänd för leverans:** [ ] JA  [ ] NEJ
+Applikationen uppfyller alla krav. Det är det en fullt fungerade quiz-app utan några buggar som förhindrar användningen av applikationen. Lighthouse ger den 100 på tillgänglighet. Tydligare HTML-struktur och responsiv design för Ipad är två stora förbättrningsområden.
 
-**Datum:** [Fyll i]  
-**Signatur:** [Ditt namn]
+**Godkänd för leverans:** [X] JA  [ ] NEJ
+
+**Datum:** 2025-10-22  
+**Signatur:** Liam Wiklund.
