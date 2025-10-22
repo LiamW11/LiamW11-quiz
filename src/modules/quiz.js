@@ -2,8 +2,9 @@
 // QUIZ-LOGIK (Affärslogik)
 // =================================
 
-import { getAllQuestions } from "./questions.js"
+import { getAllQuestions } from "./questions.js";
 import * as UI from "./ui.js";
+
 
 // State - håller koll på nuvarande quiz-tillstånd
 let state = {
@@ -116,13 +117,7 @@ export function startTimer() {
     if (state.timeLeft <= 0) {
       stopTimer();
       alert("Tid slut. Försök igen!");
-      const firstQuestion = init();
-      UI.updateScore(0);
-      UI.displayHighscore();
-      UI.renderQuestion(firstQuestion);
-      startTimer();
-      UI.showView("quiz");
-      answered = false;
+      window.location.reload();
       return;
     }
     if(state.timeLeft <= 50){

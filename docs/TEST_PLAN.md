@@ -24,7 +24,7 @@ Bocka av ✅ när testet är godkänt.
 - Startsida visas
 - "Starta Quiz"-knapp syns
 
-**Status:** [ ] PASS  [ ] FAIL
+**Status:** [X] PASS  [ ] FAIL
 
 ---
 
@@ -37,7 +37,7 @@ Bocka av ✅ när testet är godkänt.
 - 4 svarsalternativ syns
 - Progress visar "Fråga 1 av 15"
 
-**Status:** [ ] PASS  [ ] FAIL
+**Status:** [X] PASS  [ ] FAIL
 
 ---
 
@@ -51,7 +51,7 @@ Bocka av ✅ när testet är godkänt.
 - Feedback visar "Rätt! ✅"
 - "Nästa fråga"-knapp aktiveras
 
-**Status:** [ ] PASS  [ ] FAIL
+**Status:** [X] PASS  [ ] FAIL
 
 ---
 
@@ -65,7 +65,7 @@ Bocka av ✅ när testet är godkänt.
 - Feedback visar "Fel! ❌"
 - "Nästa fråga"-knapp aktiveras
 
-**Status:** [ ] PASS  [ ] FAIL
+**Status:** [X] PASS  [ ] FAIL
 
 ---
 
@@ -79,7 +79,7 @@ Bocka av ✅ när testet är godkänt.
 - Progress uppdateras till "Fråga 2 av 15"
 - Nya svarsalternativ visas
 
-**Status:** [ ] PASS  [ ] FAIL
+**Status:** [X] PASS  [ ] FAIL
 
 ---
 
@@ -93,7 +93,7 @@ Bocka av ✅ när testet är godkänt.
 - Procent visas (t.ex. "80%")
 - Feedbackmeddelande visas
 
-**Status:** [ ] PASS  [ ] FAIL
+**Status:** [X] PASS  [ ] FAIL
 
 ---
 
@@ -105,7 +105,7 @@ Bocka av ✅ när testet är godkänt.
 - Quiz börjar om från fråga 1
 - Poäng nollställs
 
-**Status:** [ ] PASS  [ ] FAIL
+**Status:** [X] PASS  [ ] FAIL
 
 ---
 
@@ -121,15 +121,15 @@ Bocka av ✅ när testet är godkänt.
 - Knappar går att klicka
 - Text är läsbar
 
-**Status:** [ ] PASS  [ ] FAIL
+**Status:** [X] PASS  [ ] FAIL
 
 ---
 
 ## Webbläsartest (valfritt men rekommenderat)
 
 ### Test 9: Chrome
-- [ ] Allt fungerar i Chrome
-- [ ] Inga fel i konsolen (F12 → Console)
+- [X] Allt fungerar i Chrome
+- [X] Inga fel i konsolen (F12 → Console)
 
 ### Test 10: Firefox
 - [ ] Allt fungerar i Firefox
@@ -146,20 +146,20 @@ Bocka av ✅ när testet är godkänt.
 **Förväntat:**
 - Allt fungerar som lokalt
 
-**Status:** [ ] PASS  [ ] FAIL
+**Status:** [X] PASS  [ ] FAIL
 
 ---
 
 ## Sammanfattning
 
 **Godkänt för leverans kräver:**
-- [ ] Alla Test 1-8 är PASS
-- [ ] Test 11 (Netlify) är PASS
+- [X] Alla Test 1-8 är PASS
+- [X] Test 11 (Netlify) är PASS
 
-**Totalt antal PASS:** _____ / 11
+**Totalt antal PASS:** 11/ 11
 
-**Datum:** __________  
-**Signatur:** __________
+**Datum:** 2025-10-22  
+**Signatur:** Liam Wiklund
 
 ---
 
@@ -184,11 +184,11 @@ Bocka av ✅ när testet är godkänt.
 - Startknapp ("Starta Quiz") är synlig och klickbar
 - Ingen JavaScript-fel i konsolen
 
-**Faktiskt resultat:** [Fyll i vad som faktiskt hände]
+**Faktiskt resultat:** Det visas en ruta med en knapp som låter användaren påbörja quizen.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:** [Eventuella observationer]
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -207,11 +207,11 @@ Bocka av ✅ när testet är godkänt.
 - Frågetexten är läsbar
 - Svarsalternativ visas som knappar
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** När startknappen trycks så visas en fråga med fyra olika svarsalternativ.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -231,11 +231,11 @@ Bocka av ✅ när testet är godkänt.
 - 3-5 svarsalternativ visas
 - Alla alternativ är klickbara knappar
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** Alla frågeralternativ har läsbar text och går att klicka på.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
@@ -254,12 +254,12 @@ Bocka av ✅ när testet är godkänt.
 - Tydligt visuellt att svaret är rätt
 - Färgkontrast är god (mörkgrön text/bakgrund)
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** När rätt svar väljs så får svarsalternativet en grön bakgrund som antyder på att det är rätt svar.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
 **Kommentar:**
-
+Den gröna färgen som visas kan ha högre kontrast men upplevs tydlig i nuläget.
 ---
 
 ### Test 5: Svarsvalidering - Fel svar
@@ -277,11 +277,11 @@ Bocka av ✅ när testet är godkänt.
 - Tydligt visuellt att svaret är fel
 - Färgkontrast är god
 
-**Faktiskt resultat:** [Fyll i]
+**Faktiskt resultat:** När fel svar väljs så får svarsalternativet en röd bakgrund som antyder på att svaret är fel. Det rätta svaret får en grön bakgrund för att visa användaren vilket svar som var korrekt.
 
-**Status:** [ ] PASS  [ ] FAIL  [ ] SKIP
+**Status:** [X] PASS  [ ] FAIL  [ ] SKIP
 
-**Kommentar:**
+**Kommentar:** Ingenting märkvärdigt att antyda.
 
 ---
 
