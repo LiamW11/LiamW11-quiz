@@ -1,12 +1,5 @@
-// =================================
-// QUIZ-LOGIK (Affärslogik)
-// =================================
-
 import { getAllQuestions } from "./questions.js";
-import * as UI from "./ui.js";
 
-
-// State - håller koll på nuvarande quiz-tillstånd
 let state = {
   questions: [],
   currentIndex: 0,
@@ -16,18 +9,16 @@ let state = {
   timerInterval: null,
 };
 
-// Initiera quiz - hämta frågor och återställ state
 export function init() {
   state.questions = getAllQuestions();
   shuffleQuestions();
+  //Återställ state
   state.currentIndex = 0;
   state.score = 0;
   state.totalQuestions = state.questions.length;
-
   return getCurrentQuestion();
 }
 
-// Hämta nuvarande fråga
 export function getCurrentQuestion() {
   return {
     question: state.questions[state.currentIndex],
@@ -37,24 +28,20 @@ export function getCurrentQuestion() {
   };
 }
 
-// Hämta rätt svar för nuvarande fråga
 export function getCorrectAnswer() {
   return state.questions[state.currentIndex].correctAnswer;
 }
 
-// Validera svar
 export function validateAnswer(userAnswerIndex) {
   const currentQuestion = state.questions[state.currentIndex];
-  return userAnswerIndex === currentQuestion.correctAnswer;
+  return userAnswerIndex === currentQuestion.correctAnswer; //Returnerar en TRUE eller FALSE som används senare i main.js
 }
 
-// Uppdatera poäng
 export function updateScore() {
   state.score++;
   return state.score;
 }
 
-// Gå till nästa fråga
 export function nextQuestion() {
   state.currentIndex++;
 
@@ -65,7 +52,6 @@ export function nextQuestion() {
   return null; // Inga fler frågor
 }
 
-// Hämta slutresultat
 export function getFinalScore() {
   const percentage = Math.round((state.score / state.totalQuestions) * 100);
   saveHighScore(state.score);
@@ -76,7 +62,6 @@ export function getFinalScore() {
   };
 }
 
-// Feedbackmeddelande baserat på resultat
 export function getFeedbackMessage(percentage) {
   if (percentage >= 90) {
     return "Utmärkt prestation! 🌟";
@@ -89,8 +74,8 @@ export function getFeedbackMessage(percentage) {
   }
 }
 
-// VALFRITT FÖR AVANCERAD NIVÅ: Randomisera frågeordning
 export function shuffleQuestions() {
+  //Fisher-Yates för att blanda frågorna
   for (let i = state.questions.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [state.questions[i], state.questions[j]] = [

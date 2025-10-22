@@ -1,14 +1,10 @@
-// =================================
-// FRÅGOR - STARTER DATA
-// =================================
-
 export const questions = [
   {
     id: 1,
     category: "JavaScript",
     question: "Vad returnerar typeof []?",
     options: ["array", "object", "undefined", "null"],
-    correctAnswer: 1, // Index 1 = "object"
+    correctAnswer: 1,
   },
   {
     id: 2,
